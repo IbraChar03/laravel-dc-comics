@@ -26,4 +26,23 @@ class MainController extends Controller
     {
         return view("pages.create-person");
     }
+    public function requestPerson(Request $request)
+    {
+        $data = $request->validate(
+            [
+                "firstName" => "string|required|max:32",
+                "lastName" => "string|required|max:32",
+                "dateOfBirth" => "date|required",
+                "height" => "required|integer|min:40|max:260"
+            ]
+
+        );
+        $person = new Person();
+        $person->firstName = $data["firstName"];
+        $person->lastName = $data["lastName"];
+        $person->dateOfBirth = $data["dateOfBirth"];
+        $person->height = $data["height"];
+        $person->save();
+        return redirect()->route("home");
+    }
 }

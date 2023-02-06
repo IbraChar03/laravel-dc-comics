@@ -1,7 +1,9 @@
 @extends('layouts.main-layout')
 @section('content')
 <h1>CREATE A NEW PERSON</h1>
-<form action="">
+<form action="{{route('person.request')}}"
+    method="POST">
+    @csrf
     <label for="firstName">First Name : </label>
     <input type="text"
         name="firstName"
@@ -18,6 +20,8 @@
     <input type="number"
         name="height"
         id=""> <br> <br>
+    <input type="submit"
+        value="CREATE">
 </form>
 
 @endsection

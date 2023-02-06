@@ -22,4 +22,8 @@ class MainController extends Controller
         $person->delete();
         return redirect()->route("home");
     }
+    public function createPerson()
+    {
+        return view("pages.create-person");
+    }
 }

@@ -4,9 +4,9 @@
 <ul>
 
     <li>
-        {{$person -> firstName}} {{$person -> lastName}} <br>
-        Date Of Birth : {{$person -> dateOfBirth}} <br>
-        Height : {{$person -> height}} cm
+        <strong>Full Name : </strong> {{$person -> firstName}} {{$person -> lastName}} <br>
+        <strong>Date Of Birth : </strong>{{$person -> dateOfBirth}} <br>
+        <strong>Height :</strong> {{$person -> height}} cm
     </li>
 
 

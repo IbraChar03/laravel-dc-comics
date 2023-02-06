@@ -1,6 +1,7 @@
 @extends('layouts.main-layout')
 @section('content')
 <h1>EDIT A PERSON</h1>
+@include('components.errors')
 <form action="{{route('person.update',$person)}}"
     method="POST">
     @csrf

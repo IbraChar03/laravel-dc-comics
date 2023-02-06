@@ -6,6 +6,8 @@
     <li>
         <a href="{{route('person.show',$person)}}">
             {{$person -> firstName}} {{$person -> lastName}} </a>
+        <span> - </span>
+        <a href="{{route('person.delete',$person)}}">DELETE</a>
     </li>
 
     @endforeach

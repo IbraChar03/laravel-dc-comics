@@ -12,7 +12,9 @@
             {{$person -> firstName}} {{$person -> lastName}} </a>
         <span> - </span>
         <a href="{{route('person.delete',$person)}}">DELETE</a>
-    </li>
+        <span> - </span>
+        <a href="{{route('person.edit',$person)}}">EDIT</a>
+    </li> <br>
 
     @endforeach
 </ul>
